@@ -16,3 +16,6 @@ var studentNames = ["John", "Jack", "Pat"];
 var studentNames2 = new Array("John", "Jack", "Pat");
 
 document.write(studentNames[0] + "<br/>");
+
+document.write(typeof student + "<br/>");
+document.write(typeof studentNames + "<br/>");

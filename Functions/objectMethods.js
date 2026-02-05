@@ -18,8 +18,12 @@ var student2 = {
 this.id = 3;
 this.name = "Mary";
 
-var displayForStudent1 = displayDetails.bind(student1, 10, 30);
+var displayForStudent1 = displayDetails.bind(student1, 10);
 displayForStudent1();
 
-var displayForStudent2 = displayDetails.bind(student2, 20, 40);
+var displayForStudent2 = displayDetails.bind(student2, 20);
 displayForStudent2();
+
+displayForStudent2.displayDetails = displayForStudent1;
+
+displayForStudent2.displayDetails(40);

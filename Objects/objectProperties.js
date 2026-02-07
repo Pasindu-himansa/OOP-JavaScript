@@ -8,10 +8,25 @@ course1.name = "End to end Java project"; // [Set]
 
 course1.description = "Master Java Project Development"; // [Put]
 
-delete course1.description;
+//delete course1.description; // [Delete]
 
 console.log("description" in course1);
 console.log("name" in course1);
 
 console.log("toString" in course1);
 console.log(course1.hasOwnProperty("toString"));
+
+for (var eachProperty in course1) {
+  console.log(eachProperty);
+  console.log(course1[eachProperty]);
+}
+
+var allProperties = Object.keys(course1);
+for (var i = 0; i < allProperties.length; i++) {
+  console.log(allProperties[i]);
+  console.log(course1[allProperties[i]]);
+}
+
+console.log(course1.propertyIsEnumerable("name"));
+
+console.log(allProperties.propertyIsEnumerable("length"));

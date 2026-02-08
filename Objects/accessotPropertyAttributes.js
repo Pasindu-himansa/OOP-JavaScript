@@ -2,14 +2,19 @@ var creditCard = {
   _name: "John",
 };
 
-Object.defineProperty(creditCard,"name",{
-    get: function() {
-        return this._name;
+Object.defineProperty(creditCard, "name", {
+  get: function () {
+    return this._name;
+  },
+});
 
-    }
-    set: function(value){
-        this._name = value; 
-    },
-    enumerable: true,
-    configurable: true
-})
+console.log("name" in creditCard);
+console.log(creditCard.propertyIsEnumerable("name"));
+
+delete creditCard.name;
+
+console.log("name" in creditCard);
+
+creditCard.name = "Bob";
+
+console.log(creditCard.name);

@@ -1,0 +1,19 @@
+var creditCard = {};
+
+Object.defineProperties(creditCard, {
+  _name: {
+    value: "John",
+    enumerable: true,
+    configurable: true,
+    writable: true,
+  },
+  name: {
+    get: function () {
+      return this._name;
+    },
+
+    set: function (value) {
+      this._name = value;
+    },
+  },
+});

@@ -11,7 +11,7 @@ function Laptop(manufacturer, memory, hddCapacity) {
 }
 
 var laptop1 = new Laptop("Asus", "8gb", "500gb");
-var laptop2 = new Laptop("MSI", "16gb", "Itb");
+var laptop2 = new Laptop("MSI", "16gb", "1tb");
 
 laptop1.display();
 laptop2.display();

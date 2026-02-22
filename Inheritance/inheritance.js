@@ -1,13 +1,17 @@
-var project = {
+var project1 = {
   name: "Road Work",
+  display: function () {
+    console.log(this.name);
+  },
 };
 
-console.log(project.hasOwnProperty("name"));
-Object.create(Object.prototype, {
+var project2 = Object.create(project1, {
   name: {
     configurable: true,
     enumerable: true,
-    value: "Road Work",
+    value: "Bridge work",
     writable: true,
   },
 });
+project1.display();
+project2.display();

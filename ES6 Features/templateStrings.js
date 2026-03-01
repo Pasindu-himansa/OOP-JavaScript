@@ -1,6 +1,7 @@
+let name = "John";
 let quote = `You are the
 creator
 of your
-destiny`;
+destiny ${name}`;
 
 console.log(quote);

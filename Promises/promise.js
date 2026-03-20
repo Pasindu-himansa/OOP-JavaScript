@@ -13,7 +13,9 @@ function myAsyncFunction() {
   return promise;
 }
 
-myAsyncFunction().then(
-  (success) => console.log(success),
-  (error) => console.log(error),
-);
+myAsyncFunction()
+  .then(
+    (success) => console.log(success),
+    //(error) => console.log(error),
+  )
+  .catch((error) => console.log(error));
